@@ -10,7 +10,7 @@ const MainLayout = () => {
 
       {/* Main Content */}
       <main className="flex-grow container mx-auto px-6 py-8">
-       hhhhhhhhh
+      Welcome to ElegantStore!
       </main>
 
       {/* Footer (اختياري) */}

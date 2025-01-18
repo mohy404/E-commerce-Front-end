@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Header = () => {
   return (
@@ -27,7 +26,7 @@ const Header = () => {
             href="/category"
             className="text-gray-800 hover:text-indigo-600 transition duration-300 font-medium"
           >
-            Category
+            Categories
           </a>
           <a
             href="/about"
@@ -36,10 +35,16 @@ const Header = () => {
             About
           </a>
           <a
-            href="/contact"
+            href="/login"
+            className="text-gray-800 hover:text-indigo-600 transition duration-300 font-medium"
+          >
+            Login
+          </a>
+          <a
+            href="/register"
             className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300 font-medium"
           >
-            Contact Us
+            Register
           </a>
         </nav>
       </div>
