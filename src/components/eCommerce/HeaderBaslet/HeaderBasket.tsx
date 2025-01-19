@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../../../assets/cart.svg?react";
+import cartIcon from '../../../assets/svg/cart.svg';
 
 interface HeaderBasketProps {
   quantity?: number; // الكمية اختيارية (Optional)
@@ -8,8 +8,12 @@ interface HeaderBasketProps {
 const HeaderBasket: React.FC<HeaderBasketProps> = ({ quantity = 0 }) => {
   return (
     <div className="relative">
-     
-      <Logo className="w-8 h-8 text-gray-800 hover:text-indigo-600 transition duration-300" title="Basket" />
+      {/* أيقونة السلة */}
+      <img
+        src={cartIcon}
+        alt="Basket"
+        className="w-8 h-8 text-gray-800 hover:text-indigo-600 transition duration-300"
+      />
 
       {/* Quantity Badge */}
       {quantity > 0 && (
