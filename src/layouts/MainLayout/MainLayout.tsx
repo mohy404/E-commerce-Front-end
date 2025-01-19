@@ -1,4 +1,5 @@
 
+import Footer from '../../components/common/Footer';
 import Header from '../../components/common/Header';
 
 
@@ -15,7 +16,7 @@ const MainLayout = () => {
 
       {/* Footer (اختياري) */}
       <footer className="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2023 MyCompany. All rights reserved.</p>
+        <Footer />
       </footer>
     </div>
   );

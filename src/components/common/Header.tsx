@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { HeaderBasket } from '../eCommerce';
+
+
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // تعريف الدالة toggleMenu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="bg-white shadow-lg">
+    <header className="bg-white shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
@@ -24,8 +28,9 @@ const Header: React.FC = () => {
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
           <button
-            onClick={toggleMenu}
+            onClick={toggleMenu} // استخدام toggleMenu هنا
             className="text-gray-800 focus:outline-none"
+            aria-label="Toggle Menu"
           >
             <svg
               className="w-6 h-6"
@@ -48,7 +53,7 @@ const Header: React.FC = () => {
         <nav
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } md:flex md:items-center md:space-x-8 absolute md:static bg-white w-full md:w-auto left-0 px-6 pb-4 md:pb-0`}
+          } md:flex md:items-center md:space-x-8 absolute md:static bg-white w-full md:w-auto left-0 px-6 pb-4 md:pb-0 shadow-md md:shadow-none`}
         >
           <a
             href="/"
@@ -81,6 +86,9 @@ const Header: React.FC = () => {
             Register
           </a>
         </nav>
+
+        {/* Basket Icon */}
+        <HeaderBasket quantity={5} />
       </div>
     </header>
   );
