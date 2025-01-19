@@ -8,7 +8,7 @@ interface HeaderBasketProps {
 const HeaderBasket: React.FC<HeaderBasketProps> = ({ quantity = 0 }) => {
   return (
     <div className="relative">
-      {/* أيقونة السلة */}
+     
       <Logo className="w-8 h-8 text-gray-800 hover:text-indigo-600 transition duration-300" title="Basket" />
 
       {/* Quantity Badge */}
